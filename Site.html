@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ckorlupa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #121212; color: #e0e0e0; scroll-behavior: smooth; }
+        header { position: fixed; width: 100%; padding: 10px; background: rgba(18, 18, 18, 0.9); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); z-index: 100; border-radius: 15px; backdrop-filter: blur(10px); transition: background 0.3s, transform 0.3s; transform: translateY(-10px); top: 20px; }
+        header.scrolled { background: rgba(30, 30, 30, 0.9); transform: translateY(0); }
+        nav { display: flex; justify-content: center; gap: 20px; }
+        nav a { text-decoration: none; color: #ffffff; font-weight: 500; padding: 8px 12px; transition: background 0.3s, color 0.3s; border-radius: 5px; -webkit-tap-highlight-color: transparent; }
+        nav a:hover { background: rgba(255, 255, 255, 0.2); color: #ffffff; }
+        .icon { width: 24px; height: 24px; filter: brightness(0) invert(1); margin-right: 10px; vertical-align: middle; }
+        section { padding: 150px 30px; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; text-align: center; position: relative; background-color: #1e1e1e; }
+        .section2 { background-color: #292929; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 70vh;}
+        .section3 { background-color: #333333; padding: 20px 20px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 50vh; }
+        h1, h2 { margin-bottom: 4px; opacity: 0; transform: translateY(30px) scale(0.8); transition: opacity 0.5s ease, transform 0.5s ease; }
+        h1.visible, h2.visible { opacity: 1; transform: translateY(0) scale(1); }
+        p { font-size: 1.1em; max-width: 600px; color: #b0b0b0; margin-top: 10px; }
+        a.link { color: #ffffff; text-decoration: none; transition: color 0.3s; -webkit-tap-highlight-color: transparent; }
+        a.link:hover { color: #00bcd4; }
+        .contact-image { margin-top: 10px; width: 150px; height: auto; }
+        .header-image { width: 140px; height: auto; margin-bottom: 2px; }
+        footer { margin-top: 20px; font-size: 0.9em; color: #ffffff; font-weight: bold; text-shadow: 1px 1px 2px #888888, -1px -1px 2px #888888, 1px -1px 2px #888888, -1px 1px 2px #888888; }
+        .footer-container { display: flex; flex-direction: column; align-items: center; padding-bottom: 20px; }
+        .button-container { display: flex; gap: 30px; }
+        .button { width: 120px; height: 120px; background: transparent; border: none; cursor: pointer; padding: 0; outline: none; 
+        -webkit-tap-highlight-color: transparent;}
+        .button img { width: 100%; height: auto; transition: transform 0.2s; }
+        .button img:active { transform: scale(0.95); } /* Эффект нажатия */
+        @media (max-width: 600px) { h1 { font-size: 2.5em; } h2 { font-size: 2em; } }
+        #typing-effect {
+    font-family: 'Press Start 2P', cursive; /* Убедитесь, что шрифт подключен */
+    color: #e0e0e0;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+#typing-effect a {
+    -webkit-tap-highlight-color: transparent; /* Убирает синий фон на мобильных устройствах */
+    text-decoration: none; /* Убирает подчеркивание ссылки */
+    color: inherit; /* Делает цвет ссылки таким же, как у остального текста */
+}
+.intro {
+    display: flex;
+    flex-direction: column; /* Расположение по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.intro-image {
+    max-width: 100%; /* Адаптивное изображение */
+    height: auto; /* Сохранение пропорций */
+    margin-top: 90px; /* Отступ между заголовком и изображением */
+}
+
+.last-section {
+    padding: 50px; /* Уменьшите отступы */
+    margin: 0; /* Убедитесь, что нет внешних отступов */
+    height: auto; /* Убедитесь, что высота автоматически подстраивается */
+    overflow: hidden; /* Скрывает все, что выходит за пределы */
+}
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="https://t.me/Ck0rlupa" target="_blank">
+                <img src="https://i.postimg.cc/DfXjK0D1/Picsart-24-11-02-05-45-08-349.png" alt="Обо мне" class="icon">
+            </a>
+            <a href="#section1">
+                <img src="https://i.postimg.cc/qByL5YhL/Picsart-24-11-02-05-48-56-172.png" alt="Мои работы" class="icon">
+            </a>
+            <a href="#section3">
+                <img src="https://i.postimg.cc/DZfNjNRz/Picsart-24-11-04-05-05-23-996.png" alt="Контакты" class="icon">
+            </a>
+        </nav>
+    </header>
+
+    <section class="section1" id="section1">
+    <img src="https://i.postimg.cc/brJ7nyDH/Picsart-24-11-02-16-11-17-085.png" alt="Изображение" class="header-image">
+    <h1>Ckorlupa</h1>
+    <div class="typing-container">
+        <div id="typing-effect"></div>
+    </div>
+    <p id="typing-effect"></p>
+    <img src="https://i.postimg.cc/T2nVHy7S/Picsart-24-11-03-03-11-16-139.png" alt="Описание изображения" class="intro-image">
+</section>
+    
+    <section class="section2" id="section2">
+    <h2 style="margin-bottom: 30px;">Мои работы</h2>
+    <div class="button-container" style="display: flex; gap: 20px;">
+        <!-- Первый блок кнопки с текстом -->
+        <div style="text-align: center;">
+            <button class="button" onclick="window.open('https://t.me/arhangelokoBot', '_blank');" style="width: 89px; height: 89px; margin-top: 7px;">
+                <img src="https://i.postimg.cc/GmTzzYzV/Picsart-24-11-02-21-23-12-563.png" alt="Первая кнопка">
+            </button>
+            <p style="font-family: 'Press Start 2P', cursive; color: #e0e0e0; margin-top: 5px;">Glaz Boga</p>
+        </div>
+
+        <!-- Второй блок кнопки с текстом -->
+        <div style="text-align: center;">
+            <button class="button" onclick="window.open('https://t.me/CkorlupaBot', '_blank');" style="width: 87px; height: 87px; margin-top: 10px;">
+                <img src="https://i.postimg.cc/j5tXs1KY/Picsart-24-11-02-21-25-38-778.png" alt="Вторая кнопка">
+            </button>
+            <p style="font-family: 'Press Start 2P', cursive; color: #e0e0e0; margin-top: 5px;">Apple Certificate</p>
+        </div>
+    </div>
+</section>
+    
+    <section class="section3" id="section3">
+        <h2>Контакты</h2>
+        <p>
+            <img src="https://i.postimg.cc/ZRzT8s0D/Picsart-24-11-02-06-27-21-112.png" alt="Email" class="icon"> 
+            <a href="mailto:Ck0rlupa@proton.me" class="link">Ck0rlupa@proton.me</a>
+        </p>
+        <p style="margin-top: 10px;">
+            <img src="https://i.postimg.cc/9FBx1fVz/Picsart-24-11-02-06-27-31-948.png" alt="Signal" class="icon">
+            <a href="https://signal.me/#eu/wMJQt7jGNcKra3TXe3HlQjUMY22aMa9wJZ2X7dTbIhh1KPuROrdHhI7h8XLa7sV8" class="link">Signal Messenger</a>
+        </p>
+        <img src="https://i.postimg.cc/3JV4gr9J/Picsart-24-11-02-07-24-08-332.png" alt="Изображение контактов" class="contact-image">
+        <div class="footer-container">
+            <footer>©Ckorlupa</footer>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const headings = document.querySelectorAll('h1, h2');
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+    }
+});
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        headings.forEach(heading => {
+            observer.observe(heading);
+        });
+        
+         // Код для эффекта набора текста
+    const textBeforeLink = "Привет, меня зовут Ckorlupa!\nПочему Ckorlupa? Спросите ";
+const linkText ="У него";
+const linkHref = "https://calculator888.ru/random-generator/sluchaynyy-nik";
+
+const typingEffectElement = document.getElementById("typing-effect");
+let index = 0;
+
+function type() {
+    if (index === 0) typingEffectElement.innerHTML = ""; // Очищаем перед началом
+    if (index < textBeforeLink.length) {
+        // Печатаем текст до ссылки
+        if (textBeforeLink.charAt(index) === "\n") {
+            typingEffectElement.innerHTML += "<br>";
+        } else {
+            typingEffectElement.innerHTML += textBeforeLink.charAt(index);
+        }
+        index++;
+        setTimeout(type, 125); // Скорость печати
+    } else if (index === textBeforeLink.length) {
+        // Печатаем ссылку
+        typingEffectElement.innerHTML += `<a href="${linkHref}" target="_blank"><u>${linkText}</u></a>`;
+        index++; // Увеличиваем индекс, чтобы завершить функцию
+    }
+}
+
+// Запускаем эффект набора текста
+type();
+
+// Запускаем эффект печати при загрузке страницы
+window.onload = type; // Теперь эффект начнется при загрузке страницы
+    window.addEventListener('load', () => {
+        type();
+    });
+    </script>
+</body>
+</html>
